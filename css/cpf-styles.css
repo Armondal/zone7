@@ -1,0 +1,211 @@
+/* Basic styling, adapt as needed */
+:root {
+  --Primitive-Color-Title: #18181B;
+  --Primitive-Color-Stock: #a1a1aa;
+}
+#custom-profile-form {
+    margin: 20px auto;
+  }
+
+  #custom-profile-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  #custom-profile-form input[type=text],
+  #custom-profile-form input[type=email],
+  #custom-profile-form textarea,
+  #custom-profile-form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  #cpf-submit-btn {
+    width: 100%;
+    background-color: #fce400;
+    border: none;
+    height: 48px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #18181B;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+  #cpf-submit-btn:hover {
+    opacity: 0.8;
+  }
+  #cpf-result {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+
+  .form-wrapper{
+    padding: 32px 56px;  
+    border-radius: 12px;
+    max-width: 752px;
+    flex-shrink: 0;
+    background: #FFF;
+  }
+
+  .form-wrapper:hover{
+    transition: all 0.3s ease;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+
+  .two-col {
+    display: flex;
+    gap: 1rem;          /* Space between columns */
+    flex-wrap: wrap;    /* Let columns wrap if viewport is too narrow */
+    margin-bottom: 40px;
+  }
+  
+  .two-col .col {
+    flex: 1 1 0;    
+   
+  }
+  .one-col{
+    display: flex;
+    gap: 1rem;          /* Space between columns */
+    flex-wrap: wrap;    /* Let columns wrap if viewport is too narrow */
+    margin-bottom: 40px;
+    flex: 1 1 100%; 
+    flex-direction: column;
+  }
+  .two-col label,
+  .one-col label,
+  .form-wrapper .terms {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .two-col input,
+  .one-col input,
+  .two-col select,
+  .one-col select,
+  .two-col textarea,
+  .one-col textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;    
+    border: 1px solid var(--Primitive-Color-Stock);
+    border-color: var(--Primitive-Color-Stock)!important;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .two-col input::placeholder,
+  .two-col select::placeholder,
+  .two-col select,
+  .one-col input::placeholder,
+  .one-col select::placeholder,
+  .one-col select {
+    color: var(--Primitive-Color-Stock);
+    opacity: 1;
+  }
+  .two-col input[type="text"]:hover{
+    outline: none;
+  }
+  .form-wrapper label,
+  .form-wrapper .terms{
+    color: var(--Primitive-Color-Title);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+.two-col .col .gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Primitive-Color-Title, #18181B);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+.two-col .col .gender input[type="radio"] {
+  height: 24px;
+  width: 24px;
+  accent-color: var(--Primitive-Color-Title);
+}
+
+.gender .radio-item{
+  display: flex!important;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: var(--Primitive-Color-Title, #18181B);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.form-wrapper .mb-24 {
+  margin-bottom: 24px!important;
+}
+
+.one-col textarea {
+  height: 96px;
+}
+
+.terms-container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.terms-container input[type="checkbox"] {
+  -webkit-appearance: none; /* For Safari */
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  border: 1px solid currentColor;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  transform: translateY(-0.075em);
+}
+
+.terms-container input[type="checkbox"]::before{
+  content: "";
+  width: 16px;
+  height: 16px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--Primitive-Color-Title);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.terms-container  input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+
+.terms-container label{
+  color: var(--Primitive-Color-Title);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  width: fit-content;
+}
+
